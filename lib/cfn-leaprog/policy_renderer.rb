@@ -9,10 +9,12 @@ class PolicyRenderer
       policy_string += "  - Effect: Allow\n"
 
       policy_string += "    Action:\n"
-      statement.actions.each do |action|
-        policy_string += "      - #{action}\n"
-        if request_parameters && request_parameters[action]
-          policy_string += "        # #{request_parameters[action]}\n"
+      if defined?(statement) && defined?(statement.actions)
+        statement.actions.each do |action|
+          policy_string += "      - #{action}\n"
+          if request_parameters && request_parameters[action]
+            policy_string += "        # #{request_parameters[action]}\n"
+          end
         end
       end
 
