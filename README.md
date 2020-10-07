@@ -1,8 +1,8 @@
 ## Background
-This tool is an experimental approach to generating least privileged IAM roles 
+This tool is an experimental approach to generating least privileged IAM roles
 for CloudFormation and Service Catalog Launch Constraints.
 
-The sourcebase contains two approaches.  
+The sourcebase contains two approaches.
 
 This doc describes how to execute the CloudTrail event filtering approach.
 
@@ -26,9 +26,9 @@ rake ct:infra
 
 ### Converge a CloudFormation Template
 
-First select a CloudFormation template that you want to generate the least privileged 
-policy/role for.  The `spec/test_templates/DynamoDB_Table.template` is a simple one 
-to start with.  
+First select a CloudFormation template that you want to generate the least privileged
+policy/role for.  The `spec/test_templates/DynamoDB_Table.template` is a simple one
+to start with.
 
 Edit the parameter values in `spec/test_templates/parameters/ddb.json` to your liking.
 
