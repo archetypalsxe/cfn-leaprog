@@ -9,12 +9,15 @@ This doc describes how to execute the CloudTrail event filtering approach.
 The other approach involves scraping CloudFormation stack events.  It is NOT recommended
 but is kept here for historical reference.
 
+## Dependencies
+* AWS default credentials that have permission setup CloudTrail, CloudWatch and DynamoDB
+* Ruby
+  * 2.6 was used for development
+* AWS SAM CLI
+  * [Install Guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+
+
 ## Setup the Infrastructure
-
-Make sure your environment has default AWS credentials that can setup
-CloudTrail, CloudWatch and DynamoDB.
-
-Make sure you have a recent Ruby installed.  2.6 was used for development.
 
 ```
 bundle install
